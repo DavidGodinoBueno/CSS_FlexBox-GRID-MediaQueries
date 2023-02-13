@@ -1,0 +1,193 @@
+.contenedor {
+    display:grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: 65px 80px 80px 80px 80px 65px 65px 65px 65px 65px;
+    grid-gap: 2px;
+    grid-template-areas: 
+    "header elmenu elmenu elmenu"
+    "hero hero hero hero"
+    "hero hero hero hero"
+    "hero hero hero hero"
+    "hero hero hero hero"
+    "main main . image"
+    "main main . image"
+    "main main . extra"
+    "main main . extra"
+    "banner banner banner banner"
+    "banner banner banner banner";
+}
+
+.contenedor div {
+    text-align: center;
+    font-family:Arial;
+}
+
+.header {
+    background-color: rgb(7, 2, 40);
+    border: solid black 1px;
+    grid-area: header;
+    color:white;
+}
+
+.menu {
+    background-color: red;
+    border: solid black 1px;
+    grid-area: elmenu;
+    grid-column: 2/5;
+    color:white;
+}
+
+.hero {
+    background-color: blue;
+    border: solid black 1px;
+    grid-area: hero;
+    grid-column: 1/5;
+    grid-row: 2/6;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    background-color: rgb(7, 2, 40);
+    border: solid black 1px;
+    grid-area: main;
+    grid-column: 1/3;
+    grid-row:6/10;
+    color:white;
+}
+
+.image {
+    background-color: greenyellow;
+    border: solid black 1px;
+    grid-area: image;
+}
+
+.extra {
+    background-color: green;
+    border: solid black 1px;
+    grid-area: extra;
+}
+
+.banner {
+    background-color: yellow;
+    border: solid black 1px;
+    grid-area: banner;
+}
+
+.hero .subhero {
+    margin:2px;
+}
+
+.subhero {
+    background-color:beige;
+    border:solid black 1px;
+    width:155px;
+    height: 155px;
+}
+
+@media screen and (max-width:970px) and (min-width:608px) {
+
+    .contenedor {
+        display:grid;
+        grid-template-columns: repeat(4, 25%);
+        grid-template-rows: 65px 120px 120px 120px 120px 65px 65px 65px 65px 65px 65px 65px 65px;
+        grid-gap: 2px;
+        grid-template-areas: 
+        "header header header header"
+        "hero hero hero hero"
+        "hero hero hero hero"
+        "hero hero hero hero"
+        "hero hero hero hero"
+        "elmenu main main main"
+        "elmenu main main main"
+        "elmenu main main main"
+        "elmenu main main main"
+        "elmenu banner banner banner"
+        "elmenu banner banner banner"
+        "elmenu extra extra image"
+        "elmenu extra extra image";
+    }
+
+    .menu {
+        background-color: red;
+        border: solid black 1px;
+        grid-area: elmenu;
+        grid-column: 1/2;
+        color:white;
+    }
+
+    .main {
+        background-color: rgb(7, 2, 40);
+        border: solid black 1px;
+        grid-area: main;
+        grid-column: 2/5;
+        grid-row:6/10;
+        color:white;
+    }
+
+
+}
+
+@media screen and (max-width:608px) {
+    
+    .contenedor {
+        display:grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 65px 65px 106px 106px 106px 106px 106px 106px 65px 65px 65px 65px 65px 65px 65px 65px 65px 65px;
+        grid-gap: 2px;
+        grid-template-areas: 
+        "header"
+        "elmenu"
+        "hero"
+        "hero"
+        "hero"
+        "hero"
+        "hero"
+        "hero"
+        "main"
+        "main"
+        "main"
+        "main"
+        "banner"
+        "banner"
+        "extra"
+        "extra"
+        "image"
+        "image";
+    }
+
+    .hero {
+        background-color: blue;
+        border: solid black 1px;
+        grid-area: hero;
+        grid-column: 1;
+        grid-row: 3/9;
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu {
+        background-color: red;
+        border: solid black 1px;
+        grid-area: elmenu;
+        grid-column: 1;
+        grid-row:2;
+        color:white;
+    }
+
+    .main {
+        background-color: rgb(7, 2, 40);
+        border: solid black 1px;
+        grid-area: main;
+        grid-column: 1;
+        grid-row:9/13;
+        color:white;
+    }
+
+}
